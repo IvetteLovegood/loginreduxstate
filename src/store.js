@@ -7,14 +7,15 @@ const reducer = (state, action) => {
             user: state.user.concat(true)
         };
 
-    } else if (action.type === "LOG_OUT") {
-    	return {
-    		...state,
-    		user: state.user.concat(false)
-    	}
+    } 
+        else if (action.type === "LOG_OUT") {
+    	   return {
+    		  ...state,
+    		  user: state.user.concat(false)
+    	   };
     }
 
     return state;
 };
 
-export default createStore(reducer, {user:""})
+export default createStore(reducer, {user:" "})

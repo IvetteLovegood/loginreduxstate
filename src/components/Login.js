@@ -42,6 +42,7 @@ const mapDispatchToProps = dispatch => {
     return {
         logIn(user) {
             dispatch(logIn(user));
+            console.log(user);
         }
     }
 }

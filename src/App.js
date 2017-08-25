@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Grid, Row, Col } from 'react-bootstrap';
 import Layout from './components/Layout';
+import ViewPublic from './components/ViewPublic';
 import './App.css';
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
                   <Navbar.Header>
                       <Navbar.Brand>
                           <a>Login</a>
+                          <a><ViewPublic /></a>
                       </Navbar.Brand>
                   </Navbar.Header>
               </Navbar>
