@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Login from './Login';
 import store from '../store';
 
-
-
 class Layout extends Component {
 
     constructor(props) {
@@ -18,17 +16,15 @@ class Layout extends Component {
                 user: store.getState().user
             });
         });
-
     }
 
     render() {
 
-    	const isLoggedIn = this.state.user;
+        const isLoggedIn = this.state.user;
 
         return (
-        	<div>
-        	LOGIN: <b>{isLoggedIn ? 'OK' : 'NO'}</b>
-        	<label>{this.state.user}</label>
+            <div>LOGIN: <b>{isLoggedIn ? 'OK' : 'NO'}</b>
+            <label>{this.state.user}</label>
             <Login/>
             </div>
         );

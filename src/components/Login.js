@@ -1,22 +1,12 @@
-import React, { Component } from 'react';
-import store from '../store';
+import React from 'react';
 import { logIn } from '../actionCreators';
+import { connect } from 'react-redux';
 import { FormGroup, Form, Button, Col, ControlLabel, FormControl } from 'react-bootstrap';
-class Login extends Component {
 
-    constructor(props) {
-        super(props);
-        this.logIn = this.logIn.bind(this);
 
-        this.state = {
-            user: ""
-        }
-    }
-
-    render() {
-
-        return (
-            <Form horizontal>
+const Login = ({ user, logIn }) => {
+    return (
+        <Form horizontal>
 			    <FormGroup controlId="formHorizontalEmail">
 			        <Col componentClass={ControlLabel} sm={2}> Email
 			        </Col>
@@ -33,20 +23,27 @@ class Login extends Component {
 			    </FormGroup>
 			    <FormGroup>
 			        <Col smOffset={2} sm={10}>
-			        <Button onClick={() => this.logIn(true)}>
+			        <Button onClick={() => logIn(true)}>
 			            Sign in
 			        </Button>
 			        </Col>
 			    </FormGroup>
 			</Form>
-        );
-    }
+    );
+}
 
-    logIn(user) {
-        store.dispatch(logIn(user));
-        console.log(user);
-
+const mapStateToProps = state => {
+    return {
+        user: state.user
     }
 }
 
-export default Login;
+const mapDispatchToProps = dispatch => {
+    return {
+        logIn(user) {
+            dispatch(logIn(user));
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
