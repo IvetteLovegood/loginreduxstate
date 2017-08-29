@@ -23,9 +23,10 @@ class Layout extends Component {
         const isLoggedIn = this.state.user;
 
         return (
-            <div>LOGIN: <b>{isLoggedIn ? 'OK' : 'NO'}</b>
-            <label>{this.state.user}</label>
-            <Login/>
+            <div id="hidenLogin">
+                LOGIN: <b>{isLoggedIn ? 'OK' : 'NO'}</b>
+                <label>{this.state.user}</label>
+                    <Login/>
             </div>
         );
     }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import store from '../store';
-import datos from './detailPublic';
+import '../index.css';
 
 class ViewPublic extends Component {
 
@@ -19,12 +19,13 @@ class ViewPublic extends Component {
         });
     }
 
+
     render() {
     const isLoggedIn = this.state.user;
 
        return (
             <div>
-                <Link to="/datos">
+                <Link to="/list">
                     {isLoggedIn ? '' : 'Productos'}
                 </Link>
             </div>

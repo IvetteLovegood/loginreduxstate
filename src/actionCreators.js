@@ -11,7 +11,8 @@ const logOut = user => {
 		type: "LOG_OUT",
 		user
 	}
-}
+	
+} 
 
 
 export {logIn, logOut};
