@@ -7,11 +7,12 @@ const reducer = (state, action) => {
             user: state.user.concat(true)
         };
 
-    } else if (action.type === "LOG_OUT") {
-    	return {
-    		...state,
-    		user: state.user.concat(false)
-    	}
+    } 
+        else if (action.type === "LOG_OUT") {
+    	   return {
+    		  ...state,
+    		  user: state.user.concat(false)
+    	   };
     }
 
     return state;
@@ -25,3 +26,4 @@ const logger = store => next => action => {
 }
 
 export default createStore(reducer, {user:""}, applyMiddleware(logger))
+
