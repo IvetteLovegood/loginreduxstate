@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Login from './Login';
+import {Link} from 'react-router-dom';
 import store from '../store';
+import datos from './detailPublic';
 
-class Layout extends Component {
+class ViewPublic extends Component {
 
     constructor(props) {
         super(props);
@@ -19,14 +20,17 @@ class Layout extends Component {
     }
 
     render() {
+    const isLoggedIn = this.state.user;
 
-        const isLoggedIn = this.state.user;
-
-        return (
-            <div><b>{isLoggedIn ? '' : 'Productos'}</b>
+       return (
+            <div>
+                <Link to="/datos">
+                    {isLoggedIn ? '' : 'Productos'}
+                </Link>
             </div>
-        );
+
+       );
     }
 }
 
-export default Layout;
+export default ViewPublic;
