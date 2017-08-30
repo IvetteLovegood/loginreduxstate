@@ -1,33 +1,27 @@
-import React from 'react';
-import { logIn } from '../actionCreators';
-import { connect } from 'react-redux';
-import { FormGroup, Form, Col, ControlLabel, FormControl } from 'react-bootstrap';
+import React, { Component } from 'react';
+import classie from 'classie';
 
 
-const Login = ({ user, logIn }) => {
-    return (
-        <Form horizontal>
-			    <FormGroup controlId="formHorizontalEmail">
-			        <Col componentClass={ControlLabel} sm={2}> LISTA DE PRODUCTOS
-			        </Col>
-			    </FormGroup>
-			</Form>
-    );
-}
+var hidden;
 
-const mapStateToProps = state => {
-    return {
-        user: state.user
+class detailPublic extends  Component {
+
+      componentWillMount() {
+        hidden = document.getElementById('hidenLogin');
+
+       classie.add(hidden, 'hidenLogin');
+
+    }
+
+
+    render() {
+        return (     
+            <div>
+              <p>Lista de Productos</p>
+            </div>     
+          
+        );
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        logIn(user) {
-            dispatch(logIn(user));
-            console.log(user);
-        }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default detailPublic;

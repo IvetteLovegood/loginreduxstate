@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const logIn = (user) => {
-
     console.log("responsejson", user.password);
     return dispatch => {
         return axios.post('http://localhost:3001/auth/login/', user)
@@ -17,5 +16,6 @@ const logIn = (user) => {
             });
     };
 }
+
 
 export { logIn };

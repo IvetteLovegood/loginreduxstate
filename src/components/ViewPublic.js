@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import store from '../store';
-import datos from './detailPublic';
+import '../index.css';
+
+var jsonresponse;
 
 class ViewPublic extends Component {
 
@@ -9,22 +11,30 @@ class ViewPublic extends Component {
         super(props);
 
         this.state = {
-            user: ""
+            user: "",
+            data: ""
         }
 
         store.subscribe(() => {
             this.setState({
-                user: store.getState().user
+                response: store.getState()
             });
+
+            jsonresponse = this.state.response.response;
+            console.log(jsonresponse)
+            this.setState({ data: jsonresponse })
         });
     }
+
+
+//TODO terminar condicion.
 
     render() {
     const isLoggedIn = this.state.user;
 
        return (
             <div>
-                <Link to="/datos">
+                <Link to="/list">
                     {isLoggedIn ? '' : 'Productos'}
                 </Link>
             </div>

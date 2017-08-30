@@ -24,8 +24,12 @@ class Layout extends Component {
 
     }
 
-    componentDidMount() {
+    renderLogin() {
+        if (this.state.data.resultCode !== "0") {
+            return (<Login/>);
+        } else {
 
+        }
     }
 
     render() {
@@ -34,7 +38,7 @@ class Layout extends Component {
             <div>
                 <div>LOGIN:</div>
                 <label >{this.state.data.resultCode}</label>
-                <Login/>
+                {this.renderLogin()}
             </div>
         );
     }
