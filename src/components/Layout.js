@@ -1,31 +1,40 @@
 import React, { Component } from 'react';
 import Login from './Login';
 import store from '../store';
-
+var jsonresponse;
 class Layout extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            user: ""
+            response: [],
+            data: ""
         }
 
         store.subscribe(() => {
             this.setState({
-                user: store.getState().user
+                response: store.getState()
             });
+
+            jsonresponse = this.state.response.response;
+            console.log(jsonresponse)
+            this.setState({ data: jsonresponse })
         });
+
+    }
+
+    componentDidMount() {
+
     }
 
     render() {
 
-        const isLoggedIn = this.state.user;
-
         return (
-            <div>LOGIN: <b>{isLoggedIn ? 'OK' : 'NO'}</b>
-            <label>{this.state.user}</label>
-            <Login/>
+            <div>
+                <div>LOGIN:</div>
+                <label >{this.state.data.resultCode}</label>
+                <Login/>
             </div>
         );
     }

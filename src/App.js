@@ -1,4 +1,4 @@
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import React, { Component } from 'react';
 import { Navbar, Grid, Row, Col } from 'react-bootstrap';
 import Layout from './components/Layout';
@@ -9,34 +9,31 @@ import './App.css';
 
 class App extends Component {
     render() {
-        return (     
-          <BrowserRouter>
-          
-            <div>
-            <div>
-                    <Route path={"/datos"} component={datos}/>
+        return (
+            <BrowserRouter>
+                <div>
+                    <div>
+                        <Route path={ "/datos"} component={datos}/>
+                    </div>
+                    <Navbar staticTop>
+                        <Navbar.Header>
+                            <Navbar.Brand>
+                                Login
+                                <ViewPublic/>
+                            </Navbar.Brand>
+                        </Navbar.Header>
+                    </Navbar>
+                    <Grid>
+                        <Row>
+                            <Col sm={8}>
+                            <Layout />
+                            </Col>
+                            <Col sm={4}>
+                            </Col>
+                        </Row>
+                    </Grid>
                 </div>
-              <Navbar staticTop>
-                  <Navbar.Header>
-                      <Navbar.Brand>
-                          <a>Login</a>
-                          <a><ViewPublic/></a>
-                      </Navbar.Brand>
-                  </Navbar.Header>
-              </Navbar>
-              <Grid>
-                  <Row>
-                      <Col sm={8}>
-                      <Layout />
-                      </Col>
-                      <Col sm={4}>
-                      </Col>
-                  </Row>
-              </Grid>
-            
-            
-          </div>     
-            </BrowserRouter> 
+            </BrowserRouter>
         );
     }
 }

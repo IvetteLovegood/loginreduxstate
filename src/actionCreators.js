@@ -1,17 +1,21 @@
-const logIn = user => {
-	return {
-		type: "LOG_IN",
-		user
+import axios from 'axios';
 
-	}
-} 
+const logIn = (user) => {
 
-const logOut = user => {
-	return {
-		type: "LOG_OUT",
-		user
-	}
+    console.log("responsejson", user.password);
+    return dispatch => {
+        return axios.post('http://localhost:3001/auth/login/', user)
+            .then(response => {
+                console.log(response);
+                dispatch({
+                    type: "LOG_IN",
+                    response: response.data
+                })
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    };
 }
 
-
-export {logIn, logOut};
+export { logIn };

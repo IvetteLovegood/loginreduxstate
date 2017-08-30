@@ -2,9 +2,13 @@ import React from 'react';
 import { logIn } from '../actionCreators';
 import { connect } from 'react-redux';
 import { FormGroup, Form, Button, Col, ControlLabel, FormControl } from 'react-bootstrap';
+var email = "ivette.hernandez@yaxche.mx"
+var password = "ivettehernandez"
+var deviceId= "";
 
+const user = {email, password, deviceId};
 
-const Login = ({ user, logIn }) => {
+const Login = ({logIn}) => {
     return (
         <Form horizontal>
 			    <FormGroup controlId="formHorizontalEmail">
@@ -23,8 +27,8 @@ const Login = ({ user, logIn }) => {
 			    </FormGroup>
 			    <FormGroup>
 			        <Col smOffset={2} sm={10}>
-			        <Button onClick={() => logIn(true)}>
-			            Sign in
+			        <Button onClick={() => logIn(user)}>
+			            Sign in 
 			        </Button>
 			        </Col>
 			    </FormGroup>
@@ -34,7 +38,7 @@ const Login = ({ user, logIn }) => {
 
 const mapStateToProps = state => {
     return {
-        user: state.user
+        ...state
     }
 }
 

@@ -1,29 +1,25 @@
 import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
 const reducer = (state, action) => {
     if (action.type === "LOG_IN") {
         return {
-        	...state,
-            user: state.user.concat(true)
+            ...state,
+            response: action.response
         };
-
-    } 
-        else if (action.type === "LOG_OUT") {
-    	   return {
-    		  ...state,
-    		  user: state.user.concat(false)
-    	   };
+    } else if (action.type === "LOG_OUT") {
+        return {
+            ...state,
+            response: state.response.concat(false)
+        };
     }
 
     return state;
 };
 
 const logger = store => next => action => {
-  console.log('dispatching', action)
-  let result = next(action)
-  console.log('next state', store.getState())
-  return result
+    let result = next(action)
+    return result
 }
 
-export default createStore(reducer, {user:""}, applyMiddleware(logger))
-
+export default createStore(reducer, { response: "" }, applyMiddleware(logger, thunk))

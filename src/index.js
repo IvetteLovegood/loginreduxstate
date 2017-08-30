@@ -5,9 +5,11 @@ import App from './App';
 import store from './store';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
+import {logIn} from './actionCreators';
+
 
 ReactDOM.render(
-	<Provider store={store}>
+    <Provider store={store}>
 		<App />
 	</Provider>, document.getElementById('root'));
 registerServiceWorker();
