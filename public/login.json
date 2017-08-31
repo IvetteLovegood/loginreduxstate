@@ -1,0 +1,16 @@
+{
+    "resultCode": "0",
+    "resultDescription": "SUCCESS",
+    "resultDateTime": "2017-08-30T17:34:56.240",
+    "name": "Ivette Guadalupe Perez Hernandez",
+    "company": {
+        "companyId": "e9d95960-7803-11e7-bbb0-db0815bb6dd9",
+        "name": "Mototec SC"
+    },
+    "profile": {
+        "name": "MANAGER"
+    },
+    "expires": "2017-08-31T01:34:56.242",
+    "sessionId": "71c22fd3-f7e5-4cf0-9655-f0e1ac2e43b7",
+    "sessionToken": "76b7eedf-4c81-448a-808c-1c2ecb2174d0"
+}

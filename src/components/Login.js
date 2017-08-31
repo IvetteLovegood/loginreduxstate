@@ -10,7 +10,7 @@ const user = {email, password, deviceId};
 
 const Login = ({logIn}) => {
     return (
-        <Form horizontal>
+        <Form horizontal id="hidenLogin">
 			    <FormGroup controlId="formHorizontalEmail">
 			        <Col componentClass={ControlLabel} sm={2}> Email
 			        </Col>
@@ -46,7 +46,6 @@ const mapDispatchToProps = dispatch => {
     return {
         logIn(user) {
             dispatch(logIn(user));
-            console.log(user);
         }
     }
 }

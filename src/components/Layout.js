@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Login from './Login';
 import store from '../store';
-var jsonresponse;
+
+var jsonresponse, hidden;
 class Layout extends Component {
 
     constructor(props) {
@@ -18,7 +19,6 @@ class Layout extends Component {
             });
 
             jsonresponse = this.state.response.response;
-            console.log(jsonresponse)
             this.setState({ data: jsonresponse })
         });
 
@@ -29,6 +29,7 @@ class Layout extends Component {
             return (<Login/>);
         } else {
 
+            return (<div></div>);
         }
     }
 
@@ -36,8 +37,6 @@ class Layout extends Component {
 
         return (
             <div>
-                <div>LOGIN:</div>
-                <label >{this.state.data.resultCode}</label>
                 {this.renderLogin()}
             </div>
         );
