@@ -17,9 +17,7 @@ class Login extends Component {
 
     handleChange(event, name) {
         event.preventDefault();
-        this.setState({
-            [name]: event.target.value
-        });
+        this.setState({ [name]: event.target.value });
     };
 
     prepareData() {

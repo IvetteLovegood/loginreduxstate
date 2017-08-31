@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classie from 'classie';
 var hidden;
 
-class detailPublic extends Component {
+class stockPublic extends Component {
 
     // componentWillMount() {
     //     hidden = document.getElementById('hidenLogin');
@@ -20,4 +20,4 @@ class detailPublic extends Component {
     }
 }
 
-export default detailPublic;
+export default stockPublic;
