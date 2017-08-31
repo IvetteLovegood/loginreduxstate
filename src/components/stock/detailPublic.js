@@ -4,10 +4,10 @@ var hidden;
 
 class detailPublic extends Component {
 
-    componentWillMount() {
-        hidden = document.getElementById('hidenLogin');
-        classie.add(hidden, 'hidenLogin');
-    }
+    // componentWillMount() {
+    //     hidden = document.getElementById('hidenLogin');
+    //     classie.add(hidden, 'hidenLogin');
+    // }
 
 
     render() {
