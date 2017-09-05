@@ -77,6 +77,31 @@ ul.shopingCart>li {
     font-size: 16px;
 }
 
+.brand>img {
+    height: 100%;
+}
+
+
+.footer-login {
+    background: rgba(11, 89, 153, 0.7);
+    padding: 1em;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    position: fixed;
+    /* border-bottom: 5px solid #29b6f6; */
+    text-align: center;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.21);
+    -ms-box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.21);
+    -o-box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.21);
+}
+
+.navbar-toggle {
+    z-index: 3;
+}
+
 .list-modal {
     color: #01579B;
     font-weight: 400;
@@ -98,6 +123,9 @@ span.product {
     padding-top: 180px;
 }
 
+.hidenLogin {
+    display: none !important;
+}
 
 .hideMenu {
     display: none !important;
@@ -173,6 +201,9 @@ button.modal-close {
 
 
 
+
+
+
 /*-------HEADER SECTION------*/
 
 
@@ -226,6 +257,9 @@ button.modal-close {
 
 
 
+
+
+
 /* ----menu-icon----*/
 
 button#showLeftPush {
@@ -247,6 +281,9 @@ button#showLeftPush {
 button#showLeftPush:hover {
     color: #01579B;
 }
+
+
+
 
 
 
@@ -283,6 +320,9 @@ button#showLeftPush:hover {
 
 
 
+
+
+
 /* Push classes applied to the body */
 
 .cbp-spmenu-push {
@@ -293,6 +333,9 @@ button#showLeftPush:hover {
 .cbp-spmenu-push-toright {
     left: 0;
 }
+
+
+
 
 
 
@@ -319,6 +362,9 @@ button#showLeftPush:hover {
 .cbp-spmenu-push.cbp-spmenu-push-toright div#page-wrapper {
     margin: 0;
 }
+
+
+
 
 
 
@@ -359,6 +405,9 @@ button#showLeftPush:hover {
     content: 'Upload Something';
     line-height: 40px;
 }
+
+
+
 
 
 
@@ -462,6 +511,9 @@ ul.dropdown-menu {
 
 
 
+
+
+
 /*--//side-menu--*/
 
 
@@ -514,18 +566,24 @@ ul.dropdown-menu {
 
 .login-button button {
 
+    -webkit-transition: 200ms all ease;
+    -o-transition: 200ms all ease;
     transition: 200ms all ease;
-    width: 160px;
+    width: 150px;
     margin-bottom: 0;
     background-color: #29b6f6;
     color: white;
     border: 1px solid #29b6f6;
-    height: 32px;
-    top: 170px;
+    height: 40px;
+    top: 181px;
+    font-size: 15px;
+    border-radius: 3px;
+    text-transform: uppercase;
 }
 
 .login-button button:hover {
     background-color: #18a2e0;
+    border: 1px solid #18a2e0;
 }
 
 .shop-button {
@@ -552,12 +610,22 @@ ul.dropdown-menu {
 .right {
     float: right;
 }
+
 .left {
     float: left;
 }
 
+.formlogin {
+    margin-top: 10.5%;
+}
+
 .orden {
     margin-top: 40px;
+}
+
+.public-stock {
+    background: white !important;
+    height: 100vh;
 }
 
 .orden button {
@@ -591,6 +659,9 @@ ul.dropdown-menu {
 
     color: #01579b;
 }
+
+
+
 
 
 
@@ -674,6 +745,9 @@ ul.dropdown-menu {
 
 
 
+
+
+
 /* Madoka */
 
 .input__field--madoka {
@@ -701,6 +775,9 @@ ul.dropdown-menu {
     -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
     transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
 }
+
+
+
 
 
 
@@ -769,6 +846,9 @@ ul.dropdown-menu {
     -moz-animation: none;
     background-image: none;
 }
+
+
+
 
 
 
@@ -918,6 +998,9 @@ i.fa.fa-tasks {
 
 
 
+
+
+
 /***** Messages *************/
 
 .notification_header {
@@ -999,6 +1082,9 @@ i.fa.fa-tasks {
     color: #979797 !important;
     font-size: 11px;
 }
+
+
+
 
 
 
@@ -1091,6 +1177,9 @@ i.icon_6 {
     color: #2196F3 !important;
     float: right;
 }
+
+
+
 
 
 
@@ -1238,6 +1327,9 @@ i.icon_6 {
 
 
 
+
+
+
 /*--Progress bars--*/
 
 
@@ -1337,6 +1429,9 @@ ul.dropdown-menu.drp-mnu li {
 
 
 
+
+
+
 /*---footer---*/
 
 .footer {
@@ -1364,6 +1459,9 @@ ul.dropdown-menu.drp-mnu li {
 .footer p a:hover {
     text-decoration: underline;
 }
+
+
+
 
 
 
@@ -1434,6 +1532,9 @@ ul.dropdown-menu.drp-mnu li {
     font-size: 2em;
     color: #fff;
 }
+
+
+
 
 
 
@@ -1568,14 +1669,21 @@ div.container-product li {
 
 
 
+
+
+
 /*--//charts--*/
 
 .widget-shadow {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.86);
     box-shadow: 0 -1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
     -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
     -moz-box-shadow: 0 -1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    border-radius: 6px;
 }
+
+
+
 
 
 
@@ -1662,6 +1770,9 @@ div.container-product li {
 
 
 
+
+
+
 /*--//statistics--*/
 
 
@@ -1670,6 +1781,9 @@ div.container-product li {
 .map {
     padding: 1em;
 }
+
+
+
 
 
 
@@ -1790,6 +1904,9 @@ div.container-product li {
 
 
 
+
+
+
 /*--//social-media--*/
 
 
@@ -1798,6 +1915,9 @@ div.container-product li {
 .calender {
     padding: 1em 1.5em 1.5em;
 }
+
+
+
 
 
 
@@ -1935,6 +2055,9 @@ td.press {
     display: flex;
     justify-content: center;
 }
+
+
+
 
 
 
@@ -2153,6 +2276,9 @@ section#tables p {
 
 
 
+
+
+
 /*--//Typography--*/
 
 
@@ -2186,6 +2312,9 @@ section#tables p {
 .table-hover>tbody>tr:hover {
     background-color: #E8E6E6;
 }
+
+
+
 
 
 
@@ -2257,6 +2386,9 @@ section#tables p {
     margin-top: 2em;
     padding: 2em;
 }
+
+
+
 
 
 
@@ -2383,6 +2515,9 @@ button.note-color-btn {
 
 
 
+
+
+
 /*--//forms--*/
 
 
@@ -2445,6 +2580,9 @@ button.note-color-btn {
 
 
 
+
+
+
 /*--//validation--*/
 
 
@@ -2473,6 +2611,9 @@ button.note-color-btn {
 
 
 
+
+
+
 /*--//grids--*/
 
 
@@ -2487,6 +2628,9 @@ button.note-color-btn {
     color: #555;
     line-height: 1.8em;
 }
+
+
+
 
 
 
@@ -2520,6 +2664,15 @@ button.note-color-btn {
     padding: 2em 2em 5em 2em;
 }
 
+.login-body>h3 {
+    color: #626262;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
 .login-top h4 {
     font-size: 1.1em;
     color: #555;
@@ -2534,15 +2687,31 @@ button.note-color-btn {
     color: #555;
 }
 
-.login-page input[type="text"],
 .login-page input[type="password"] {
     font-size: 0.9em;
     padding: 10px 15px 10px 20px;
     width: 100%;
-    color: #A8A8A8;
+    color: #0b5999;
     outline: none;
-    border: 1px solid #D3D3D3;
-    background: #FFFFFF;
+    font-size: 16px;
+    text-align: left;
+    border: 1px solid transparent;
+    border-bottom: 2px solid #0b5999;
+    background: rgba(255, 255, 255, 0);
+    margin: 0em 0em 1.5em 0em;
+}
+
+.login-page input[type="text"] {
+    font-size: 0.9em;
+    padding: 10px 15px 10px 20px;
+    width: 100%;
+    color: #0b5999;
+    outline: none;
+    font-size: 16px;
+    text-align: left;
+    border: 1px solid transparent;
+    border-bottom: 2px solid #0b5999;
+    background: rgba(255, 255, 255, 0);
     margin: 0em 0em 1.5em 0em;
 }
 
@@ -2678,6 +2847,9 @@ button.note-color-btn {
 
 
 
+
+
+
 /*--//login-page--*/
 
 
@@ -2804,6 +2976,9 @@ p.creating {
 
 
 
+
+
+
 /*-- //sign-up --*/
 
 
@@ -2846,6 +3021,9 @@ p.creating {
 .chrt-page-grids canvas#bar {
     width: 100% !important;
 }
+
+
+
 
 
 
@@ -2909,6 +3087,9 @@ h4.modal-title {
 
 
 
+
+
+
 /*--ScrollSpy --*/
 
 .scrollspy-example {
@@ -2947,6 +3128,9 @@ h4.modal-title {
 
 
 
+
+
+
 /*--tabs --*/
 
 .nav-tabs {
@@ -2965,6 +3149,9 @@ h4.modal-title {
     color: #555;
     line-height: 1.8em;
 }
+
+
+
 
 
 
@@ -2991,6 +3178,9 @@ h4.modal-title {
 .collps-grids {
     width: 49%;
 }
+
+
+
 
 
 
@@ -3259,6 +3449,9 @@ button:focus {
 
 
 
+
+
+
 /*--//inbox--*/
 
 
@@ -3418,6 +3611,9 @@ button:focus {
 
 
 
+
+
+
 /*--//compose mail--*/
 
 
@@ -3557,6 +3753,9 @@ i.fa.fa-facebook.profile-icon {
 
 
 
+
+
+
 /*--//profile--*/
 
 
@@ -3660,6 +3859,9 @@ i.fa.fa-facebook.profile-icon {
 
 
 
+
+
+
 /*--//chat--*/
 
 
@@ -3705,6 +3907,9 @@ i.fa.fa-facebook.profile-icon {
     width: 10px;
     height: 10px;
 }
+
+
+
 
 
 
@@ -3769,6 +3974,9 @@ i.fa.fa-facebook.profile-icon {
 
 
 
+
+
+
 /*----*/
 
 .weather-grids canvas {
@@ -3824,6 +4032,9 @@ i.fa.fa-facebook.profile-icon {
 
 
 
+
+
+
 /*--//weather--*/
 
 
@@ -3857,6 +4068,9 @@ i.fa.fa-facebook.profile-icon {
     color: #555;
     margin-top: 1em;
 }
+
+
+
 
 
 
@@ -3934,6 +4148,9 @@ i.fa.fa-facebook.profile-icon {
     -o-background-size: 40px 40px;
     background-size: 40px 40px;
 }
+
+
+
 
 
 
@@ -4917,7 +5134,7 @@ i.fa.fa-facebook.profile-icon {
     }
     .login-page {
         width: 90%;
-        margin: 0 auto;
+        margin: 75px auto;
     }
     .login-top {
         padding: 1em;
@@ -5459,6 +5676,9 @@ i.fa.fa-facebook.profile-icon {
         margin: 1em auto 0;
     }
 }
+
+
+
 
 
 
